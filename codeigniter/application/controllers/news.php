@@ -41,7 +41,9 @@ class News extends CI_Controller {
  
         $data['title'] = 'Create a news item';
  
-        $this->form_validation->set_rules('Full Name', 'Full Name', 'required');
+        $this->form_validation->set_rules('title', 'Title', 'required');
+        $this->form_validation->set_rules('text', 'Text', 'required');
+		$this->form_validation->set_rules('Full Name', 'Full Name', 'required');
         $this->form_validation->set_rules('Nickname', 'Nickname', 'optional');
 		$this->form_validation->set_rules('Email', 'Email', 'required');
         $this->form_validation->set_rules('Home Address', 'Home Address', 'required');
@@ -80,13 +82,8 @@ class News extends CI_Controller {
         $data['title'] = 'Edit a news item';        
         $data['news_item'] = $this->news_model->get_news_by_id($id);
         
-        $this->form_validation->set_rules('Full Name', 'Full Name', 'required');
-        $this->form_validation->set_rules('Nickname', 'Nickname', 'optional');
-		$this->form_validation->set_rules('Email', 'Email', 'required');
-        $this->form_validation->set_rules('Home Address', 'Home Address', 'required');
-		$this->form_validation->set_rules('Gender', 'Gender', 'required');
-        $this->form_validation->set_rules('Cell Number', 'Cell Number', 'required');
-		$this->form_validation->set_rules('Comments', 'Comments', 'optional');
+        $this->form_validation->set_rules('title', 'Title', 'required');
+        $this->form_validation->set_rules('text', 'Text', 'required');
  
         if ($this->form_validation->run() === FALSE)
         {
