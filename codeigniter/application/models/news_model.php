@@ -40,13 +40,13 @@ class News_model extends CI_Model {
             'title' => $this->input->post('title'),
             'slug' => $slug,
             'text' => $this->input->post('text'),
-			'Full Name' => $this->input->post('Full Name'),
-            'Nickname' => $this->input->post('Nickname'),
-            'Email' => $this->input->post('Email'),
-			'Home Address' => $this->input->post('Home Address'),
-            'Gender' => $this->input->post('Gender'),
-            'Cell Number' => $this->input->post('Cell Number'),
-			'Comments' => $this->input->post('Comments'),
+			'Full Name' => $this->input->post('fullName'),
+            'Nickname' => $this->input->post('nickname'),
+            'Email' => $this->input->post('email'),
+			'Home Address' => $this->input->post('homeAddress'),
+            'Gender' => $this->input->post('gender'),
+            'Cell Number' => $this->input->post('cellNumber'),
+			'Comments' => $this->input->post('comments'),
         );
         
         if ($id == 0) {

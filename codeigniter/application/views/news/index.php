@@ -18,13 +18,13 @@
         <tr>
             <td><?php echo $news_item['title']; ?></td>
             <td><?php echo $news_item['text']; ?></td>
-			<td><?php echo $news_item['Full Name']; ?></td>
-            <td><?php echo $news_item['Nickname']; ?></td>
-			<td><?php echo $news_item['Email']; ?></td>
-            <td><?php echo $news_item['Home Address']; ?></td>
-			<td><?php echo $news_item['Gender']; ?></td>
-			<td><?php echo $news_item['Cell Number']; ?></td>
-            <td><?php echo $news_item['Comments']; ?></td>
+			<td><?php echo $news_item['fullName']; ?></td>
+            <td><?php echo $news_item['nickname']; ?></td>
+			<td><?php echo $news_item['email']; ?></td>
+            <td><?php echo $news_item['homeAddress']; ?></td>
+			<td><?php echo $news_item['gender']; ?></td>
+			<td><?php echo $news_item['cellNumber']; ?></td>
+            <td><?php echo $news_item['comments']; ?></td>
 			<td>
                 <a href="<?php echo site_url('news/'.$news_item['slug']); ?>">View</a> |
                 <a href="<?php echo site_url('news/edit/'.$news_item['id']); ?>">Edit</a> |

@@ -43,13 +43,13 @@ class News extends CI_Controller {
  
         $this->form_validation->set_rules('title', 'Title', 'required');
         $this->form_validation->set_rules('text', 'Text', 'required');
-		$this->form_validation->set_rules('Full Name', 'Full Name', 'required');
-        $this->form_validation->set_rules('Nickname', 'Nickname', 'optional');
-		$this->form_validation->set_rules('Email', 'Email', 'required');
-        $this->form_validation->set_rules('Home Address', 'Home Address', 'required');
-		$this->form_validation->set_rules('Gender', 'Gender', 'required');
-        $this->form_validation->set_rules('Cell Number', 'Cell Number', 'required');
-		$this->form_validation->set_rules('Comments', 'Comments', 'optional');
+		$this->form_validation->set_rules('fullName', 'Full Name', 'required');
+        $this->form_validation->set_rules('nickname', 'Nickname', 'required');
+		$this->form_validation->set_rules('email', 'Email', 'required');
+        $this->form_validation->set_rules('homeAddress', 'Home Address', 'required');
+		$this->form_validation->set_rules('gender', 'Gender', 'required');
+        $this->form_validation->set_rules('cellNumber', 'Cell Number', 'required');
+		$this->form_validation->set_rules('comments', 'Comments');
  
         if ($this->form_validation->run() === FALSE)
         {
