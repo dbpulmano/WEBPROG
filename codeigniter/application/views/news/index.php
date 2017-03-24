@@ -1,5 +1,9 @@
 <h2><?php echo $title; ?></h2>
- 
+<head> 
+      <meta charset = "utf-8"> 
+      <link rel = "stylesheet" type = "text/css" 
+         href = "<?php echo base_url(); ?>public/css/style.css"> 
+</head>
 <table border='1' cellpadding='4'>
     <tr>
 		<td><strong>Full Name</strong></td>
