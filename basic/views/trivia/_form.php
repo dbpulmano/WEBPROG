@@ -16,7 +16,7 @@ use app\models\Profile;
 
     <?= $form->field($model, 'id')->textInput() ?>
 	<?= $form->field ($model, 'profile_id') ->dropDownList 
-		(Arrayhelper::map(Profile::find()->all(), 'profile_id', 'fullName'),
+		(Arrayhelper::map(Profile::find()->all(), 'id', 'fullName'),
 		['prompt'=>'Select Profile']
 	
 	) ?>
