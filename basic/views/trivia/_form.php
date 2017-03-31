@@ -1,7 +1,9 @@
 <?php
 
 use yii\helpers\Html;
+use yii\helpers\ArrayHelper;
 use yii\widgets\ActiveForm;
+use app\models\Profile;
 
 /* @var $this yii\web\View */
 /* @var $model app\models\Trivia */
@@ -13,7 +15,12 @@ use yii\widgets\ActiveForm;
     <?php $form = ActiveForm::begin(); ?>
 
     <?= $form->field($model, 'id')->textInput() ?>
-
+	<?= $form->field ($model, 'profile_id') ->dropDownList 
+		(Arrayhelper::map(Profile::find()->all(), 'profile_id', 'fullName'),
+		['prompt'=>'Select Profile']
+	
+	) ?>
+	
     <?= $form->field($model, 'question')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'answer')->textInput(['maxlength' => true]) ?>
