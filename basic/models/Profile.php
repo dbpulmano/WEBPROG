@@ -15,6 +15,8 @@ use Yii;
  * @property string $gender
  * @property string $cellNumber
  * @property string $comments
+ *
+ * @property Trivia[] $trivias
  */
 class Profile extends \yii\db\ActiveRecord
 {
@@ -32,7 +34,7 @@ class Profile extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['id', 'fullName', 'nickname', 'email', 'homeAddress', 'gender', 'cellNumber', 'comments'], 'required'],
+            [['id', 'fullName', 'nickname', 'email', 'gender', 'cellNumber'], 'required'],
             [['id', 'cellNumber'], 'integer'],
             [['fullName'], 'string', 'max' => 35],
             [['nickname'], 'string', 'max' => 8],
@@ -58,5 +60,13 @@ class Profile extends \yii\db\ActiveRecord
             'cellNumber' => 'Cell Number',
             'comments' => 'Comments',
         ];
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getTrivias()
+    {
+        return $this->hasMany(Trivia::className(), ['profile_id' => 'id']);
     }
 }

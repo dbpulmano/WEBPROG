@@ -2,6 +2,7 @@
 
 use yii\helpers\Html;
 use yii\widgets\DetailView;
+use app\models\Trivia;
 
 /* @var $this yii\web\View */
 /* @var $model app\models\Profile */
@@ -38,5 +39,20 @@ $this->params['breadcrumbs'][] = $this->title;
             'comments',
         ],
     ]) ?>
+	
+	<?= DetailView::widget([
+        'model' => $model,
+        'attributes' => [
+            'id',
+            'fullName',
+            'nickname',
+            'email:email',
+            'homeAddress',
+            'gender',
+            'cellNumber',
+            'comments',
+        ],
+    ]) ?>
+
 
 </div>
